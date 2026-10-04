@@ -5,6 +5,7 @@ Static portfolio for [RedArtem39.github.io](https://redartem39.github.io/). GitH
 ## Edit the site
 
 - Content and project links: `index.html`
+- Dedicated support page: `support/index.html`
 - Layout, colors, responsive styles: `styles.css`
 - Images and locally hosted Geist font: `assets/`
 
