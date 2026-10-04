@@ -103,9 +103,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .focus-list strong { font-size: 21px; font-weight: 550; letter-spacing: -.03em; }
 .focus-list span:last-child { grid-column: 2; color: var(--muted); font-size: 13px; }
 
-.contact { padding: clamp(50px, 6vw, 90px); background: #1c1e1a; margin-bottom: 45px; }
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: center; gap: clamp(45px, 7vw, 110px); padding: clamp(50px, 6vw, 90px); background: #1c1e1a; margin-bottom: 45px; }
 .contact h2 { margin: 0; font-size: clamp(45px, 6vw, 86px); line-height: 1; letter-spacing: -.075em; font-weight: 570; }
-.contact p { color: var(--muted); font-size: 18px; margin: 23px 0 30px; }
+.contact-copy p { color: var(--muted); font-size: 18px; margin: 23px 0 30px; }
+.support { align-self: stretch; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding-left: 30px; border-left: 1px solid var(--line); }
+.support h3 { margin: 0 0 18px; font-size: 19px; font-weight: 550; letter-spacing: -.035em; }
+.support-qr { display: block; width: 280px; max-width: 100%; }
+.support-qr img { display: block; width: 100%; height: auto; }
+.support p { margin: 12px 0 10px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+.support-link { padding-bottom: 5px; border-bottom: 1px solid var(--accent); font-size: 13px; font-weight: 650; transition: color .2s ease; }
+.support-link:hover { color: var(--accent); }
+.support-link span { margin-left: 8px; color: var(--accent); }
 .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 95px; color: var(--muted); font-size: 13px; }
 .site-footer > div { display: flex; gap: 26px; }
 
@@ -117,6 +125,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-media { min-height: 360px; order: -1; }
   .project-copy { min-height: 410px; }
   .about { grid-template-columns: 1fr; gap: 50px; }
+  .contact { grid-template-columns: minmax(0, 1fr) 300px; gap: 30px; }
+  .support { padding-left: 22px; }
 }
 
 @media (max-width: 620px) {
@@ -150,8 +160,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .small-project > a { grid-column: 2; grid-row: 1 / span 2; }
   .about { padding-block: 75px 105px; }
   .about-lead p { font-size: 17px; }
-  .contact { padding: 40px 27px; margin-bottom: 20px; }
-  .contact p { font-size: 16px; }
+  .contact { display: block; padding: 40px 27px; margin-bottom: 20px; }
+  .contact-copy p { font-size: 16px; }
+  .support { margin-top: 45px; padding: 30px 0 0; border-left: 0; border-top: 1px solid var(--line); }
   .site-footer { flex-wrap: wrap; padding-block: 26px; min-height: 0; }
 }
 
